@@ -5,7 +5,7 @@ public class Calculadora {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Variables y constantes
-		double num1, num2,num3, num4,num5;
+		double num1, num2,num3=0, num4,num5;
 		int operacion;
 		char letra;
 		Scanner sc = new Scanner (System.in);
@@ -25,6 +25,7 @@ public class Calculadora {
 		System.out.println("Dime otro número");
 		num2=sc.nextDouble();
 		System.out.println(num2);
+		
 		switch(operacion) {
 			case 1: num3=num1+num2;
 				System.out.println("El resultado de la suma es:");

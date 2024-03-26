@@ -22,23 +22,49 @@ public class concesionarioVehiculos {
 			case 1: 	System.out.println("Dime la matrícula");
 						matricula=sc.next();		
 					for(int filas=0; filas<vehiculos.length;filas++) {
-					if(vehiculos[filas][0]==null && vehiculos(filas][0]!=matricula)) {
+					if(vehiculos[filas][0]==null && vehiculos[filas][0]!=matricula) {
+						vehiculos[filas][0]=matricula;
 						System.out.println("Dime la marca");
 						vehiculos[filas][1]=sc.next();
 						System.out.println("Dime el modelo");
 						vehiculos[filas][2]=sc.next();
 						System.out.println("Dime el color");
 						vehiculos[filas][3]=sc.next();
+						System.out.println("Se ha dado de alta el vehículo con matrícula: "+vehiculos[filas][0]+vehiculos[filas][1]+vehiculos[filas][2]);
 						break;
-				
 			}
 			
 			}
 				break;
-			case 2:
-				break;
-			case 3:
-				break;
+			case 2:		System.out.println("Dime la matrícula");
+					matricula=sc.next();		
+					for(int filas=0; filas<vehiculos.length;filas++) {
+					if(vehiculos[filas][0]!=null && vehiculos[filas][0].equals(matricula)) {
+						vehiculos[filas][0]=null;
+						vehiculos[filas][1]=null;
+						vehiculos[filas][2]=null;
+						vehiculos[filas][3]=null;
+						System.out.println("Se ha dado de baja el vehículo");
+						break;
+					}	
+		}
+					break;
+			case 3:		System.out.println("Dime la matrícula");
+						matricula=sc.next();		
+						for(int filas=0; filas<vehiculos.length;filas++) {
+							if(vehiculos[filas][0]!=null && vehiculos[filas][0].equals(matricula)) {
+								System.out.println("Dime la marca");
+								vehiculos[filas][1]=sc.next();
+								System.out.println("Dime el modelo");
+								vehiculos[filas][2]=sc.next();
+								System.out.println("Dime el color");
+								vehiculos[filas][3]=sc.next();
+								System.out.println("Se han modificado los datos del vehículo con matrícula: "+matricula);
+								break;
+								} else {System.out.println("El vehículo no se ha encontrado");
+							break;}
+					}
+				
 			case 4: System.out.println("Hasta pronto!");
 				break;
 			default: System.out.println("Incorrecto");

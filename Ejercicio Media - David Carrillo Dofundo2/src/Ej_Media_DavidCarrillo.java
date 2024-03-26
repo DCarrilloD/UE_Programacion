@@ -14,7 +14,7 @@ public class Ej_Media_DavidCarrillo {
 		System.out.println("¿Cual es tu nombre?");
 		nombre=sc.next();
 		System.out.println("¿Cual ha sido tu nota de lengua?");
-		lengua=sc.nextDouble(); //Me ha sugerido directamente double ^^
+		lengua=sc.nextDouble();
 		System.out.println("Ahora por favor, indícame tu nota en matemáticas");
 		matemáticas=sc.nextDouble();
 		System.out.println("Por último dime tu nota de inglés");
